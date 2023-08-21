@@ -12,7 +12,7 @@ export default function Index() {
       <input type="text" onClick={handleClick}></input>
       <button>submit</button>
       {elements.map((element) => {
-        return <p key={element.title}>{element.title}</p>;
+        return <p key={element}>{element}</p>;
       })}
     </>
   );
