@@ -1,3 +1,9 @@
+import { List } from 'exercises/exercise-01';
+
 export default function Index() {
-  return null;
+  return (
+    <div>
+      <List />
+    </div>
+  );
 }
