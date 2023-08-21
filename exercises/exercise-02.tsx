@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { List } from '/exercises/exercise-01';
-export default function AddElementToList() {
+export function AddElementToList() {
   const [elements, addElement] = useState(['xd']);
   const [input, setInput] = useState('');
 
