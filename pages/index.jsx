@@ -3,17 +3,20 @@ import { useState } from 'react';
 
 export default function Index() {
   const [elements, addElement] = useState(['xd']);
+  const [input, setInput] = useState('');
 
-  function handleClick(e) {
-    addElement([...elements, e.target.value]);
+  function handleClick() {
+    addElement([...elements, input]);
   }
   return (
     <>
-      <input type="text"></input>
+      <input
+        type="text"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+      ></input>
       <button onClick={handleClick}>submit</button>
-      {elements.map((element) => {
-        return <p key={element}>{element}</p>;
-      })}
+      <List elements={elements}/>
     </>
   );
   FG;
