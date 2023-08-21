@@ -4,7 +4,7 @@ export function List({ elements }) {
   return (
     <div>
       {elements.map((element) => {
-        return <p key={element.title}>{element.title}</p>;
+        return <p key={element}>{element}</p>;
       })}
     </div>
   );
