@@ -1,17 +1,7 @@
-import useState from 'react';
+import { useState } from 'react';
 
-export default function MyInput() {
-  const [text, setText] = useState('hello');
+export default function AddElementToList() {
+  const [elements, AddElement] = useState([]);
 
-  function handleChange(e) {
-    setText(e.target.value);
-  }
-
-  return (
-    <>
-      <input value={text} onChange={handleChange} />
-      <p>You typed: {text}</p>
-      <button onClick={() => setText('hello')}>Reset</button>
-    </>
-  );
+  return <></>;
 }
