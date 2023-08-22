@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { List } from '/exercises/exercise-01';
 export function AddElementToList() {
-  const [elements, addElement] = useState(['xd']);
+  const [elements, addElement] = useState([]);
   const [input, setInput] = useState('');
+  let key: number = 1;
 
   function handleClick() {
-    addElement([...elements, input]);
+    addElement([...elements, { id: key++, task: input }]);
   }
   return (
     <>

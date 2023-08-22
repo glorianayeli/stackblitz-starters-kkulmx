@@ -6,7 +6,7 @@ export function List({ elements }) {
       {elements.map((element) => {
         return (
           <>
-            <p key={element}>{element}</p>
+            <p key={element.id}>{element.task}</p>
             <button>eliminar</button>
           </>
         );
