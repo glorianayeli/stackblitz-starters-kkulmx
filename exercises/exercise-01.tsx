@@ -4,7 +4,12 @@ export function List({ elements }) {
   return (
     <div>
       {elements.map((element) => {
-        return <p key={element}>{element}</p>;
+        return (
+          <>
+            <p key={element}>{element}</p>
+            <button></button>
+          </>
+        );
       })}
     </div>
   );
