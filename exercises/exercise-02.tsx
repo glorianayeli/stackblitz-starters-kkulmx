@@ -8,6 +8,9 @@ export function AddElementToList() {
   function handleClick() {
     addElement([...elements, { id: key++, task: input }]);
   }
+  function handleDeleteTodo(taskId) {
+    addElement(elements.filter((task) => task.id !== taskId));
+  }
   return (
     <>
       <input
@@ -16,7 +19,7 @@ export function AddElementToList() {
         onChange={(e) => setInput(e.target.value)}
       ></input>
       <button onClick={handleClick}>submit</button>
-      <List elements={elements} />
+      <List elements={elements} onDelete={handleDeleteTodo} />
     </>
   );
 }
