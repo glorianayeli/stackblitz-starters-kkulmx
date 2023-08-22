@@ -7,7 +7,7 @@ export function List({ elements }) {
         return (
           <>
             <p key={element}>{element}</p>
-            <button></button>
+            <button>eliminar</button>
           </>
         );
       })}
