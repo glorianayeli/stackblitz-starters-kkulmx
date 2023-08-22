@@ -7,7 +7,7 @@ export function List({ elements, onDelete }) {
         return (
           <>
             <p key={element.id}>{element.task}</p>
-            <button onClick={onDelete(element.id)}>eliminar</button>
+            <button onClick={() => onDelete(element.id)}>eliminar</button>
           </>
         );
       })}
