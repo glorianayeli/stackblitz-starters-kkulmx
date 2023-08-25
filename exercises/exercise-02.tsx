@@ -1,16 +1,17 @@
 import { useState } from 'react';
-import { List } from '/exercises/exercise-01';
+import { ElementList } from '/exercises/components/ElementList';
+
 export function AddElementToList() {
   const [elements, addElement] = useState([]);
   const [input, setInput] = useState('');
-  let key: number = 1;
 
   function handleClick() {
-    addElement([...elements, { id: key++, task: input }]);
+    addElement([...elements, { id: new Date().toISOString(), task: input }]);
   }
   function handleDeleteTodo(taskId) {
-    addElement(elements.filter((task) => task.id !== taskId));
+    addElement((prev) => prev.filter((task) => task.id !== taskId));
   }
+
   return (
     <>
       <input
@@ -19,7 +20,7 @@ export function AddElementToList() {
         onChange={(e) => setInput(e.target.value)}
       ></input>
       <button onClick={handleClick}>submit</button>
-      <List elements={elements} onDelete={handleDeleteTodo} />
+      <ElementList elements={elements} onDelete={handleDeleteTodo} />
     </>
   );
 }
