@@ -8,7 +8,7 @@ export function AddElementToList() {
   function handleClick() {
     addElement([...elements, { id: new Date().toISOString(), task: input }]);
   }
-  function handleDeleteTodo(taskId) {
+  function handleDeleteTodo(taskId: number) {
     addElement((prev) => prev.filter((task) => task.id !== taskId));
   }
 
