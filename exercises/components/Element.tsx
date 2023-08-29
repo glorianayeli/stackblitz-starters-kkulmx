@@ -1,3 +1,12 @@
+interface Props {
+  element: {
+    id: string,
+    task: string
+  },
+  onDelete: Function
+
+}
+
 export function Element({ element, onDelete }) {
   return (
     <>
