@@ -4,10 +4,9 @@ interface Props {
     task: string
   },
   onDelete: Function
-
 }
 
-export function Element({ element, onDelete }) {
+export function Element({ element, onDelete } : Props) {
   return (
     <>
       <p>{element.task}</p>
