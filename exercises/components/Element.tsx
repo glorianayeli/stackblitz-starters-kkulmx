@@ -1,12 +1,12 @@
-interface Props {
+export interface Props {
   element: {
-    id: string,
-    task: string
-  },
-  onDelete: Function
+    id: string;
+    task: string;
+  };
+  onDelete: Function;
 }
 
-export function Element({ element, onDelete } : Props) {
+export function Element({ element, onDelete }: Props) {
   return (
     <>
       <p>{element.task}</p>
